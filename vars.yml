@@ -1,0 +1,6 @@
+---
+
+mysql_root: "mysecuremysqlpassword"
+mysql_database: "project"
+mysql_user: "project"
+mysql_password: "project"
