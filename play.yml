@@ -38,3 +38,18 @@
         user: ""
         host_all: true
         state: absent
+    - name: "Mariadb - Creating Extra Database"
+      mysql_db:
+        login_user: "root"
+        login_password: "{{ mysql_root }}"
+        name: "{{ mysql_database }}"
+        state: present
+
+    - name: "Mariadb - Creating Extra User & Password"
+      mysql_user:
+        login_user: "root"
+        login_password: "{{ mysql_root }}"
+        user: "{{ mysql_user }}"
+        state: present
+        password: "{{ mysql_password }}"
+        priv: "{{ mysql_database }}.*:ALL"
