@@ -53,3 +53,5 @@
         state: present
         password: "{{ mysql_password }}"
         priv: "{{ mysql_database }}.*:ALL"
+
+    - content for dummy commit
