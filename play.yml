@@ -20,3 +20,11 @@
         state: restarted
         enabled: true
             
+
+    - name: "Mariadb - Update Root Password"
+      mysql_user:
+        login_user: "root"
+        login_password: ""
+        user: "root"
+        password: "{{ mysql_root }}"
+        host_all: true
