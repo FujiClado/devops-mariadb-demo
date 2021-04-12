@@ -29,3 +29,12 @@
         user: "root"
         password: "{{ mysql_root }}"
         host_all: true
+
+
+    - name: "Mariadb - Deleting Anonymous users"
+      mysql_user:
+        login_user: "root"
+        login_password: "{{ mysql_root }}"
+        user: ""
+        host_all: true
+        state: absent
